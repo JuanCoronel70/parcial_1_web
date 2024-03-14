@@ -1,0 +1,13 @@
+.cat-card {
+    width: 12rem; /* Ancho fijo para las tarjetas */
+    height: 12rem; /* Altura fija para las tarjetas */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    margin-top: 20%;
+    font-size: 10px;
+}
+
+.card-body {
+    height: 120px; /* Asigna altura completa al cuerpo de la tarjeta */
+    overflow-y: auto; /* Activa el scroll vertical si el contenido excede la altura */
+    font-size: 10px;
+}
