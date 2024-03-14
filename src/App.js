@@ -5,6 +5,9 @@ import Comp3 from "./components/component3";
 import './App.css';
 import CatDetails from "./components/componentDetail";
 import CatDetailsEd from "./components/componentDetailEditable";
+import Home from "./components/home";
+import Perfil from "./components/perfil";
+import PerfilEditable from "./components/perfilEditable";
 
 function App() {
 
@@ -13,11 +16,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Comp1 />} />
-          <Route path="/partsAccess" element={<Comp2 />} />
-          <Route path="/partsNotAccess" element={<Comp3 />} />
-          <Route path="/cat/:id" element={<CatDetails />} />
-          <Route path="/catEdit/:id" element={<CatDetailsEd />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Perfil" element={<Perfil />} />
+          <Route path="/PerfilEditable" element={<PerfilEditable />} />
         </Routes>
       </BrowserRouter>
     </div>
