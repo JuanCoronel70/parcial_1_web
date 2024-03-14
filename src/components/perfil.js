@@ -27,13 +27,13 @@ function Perfil(){
                 <Form style={{marginTop:"50px"}}>
                     <Form.Group className="mb-6" controlId="formBasicInput" style={{textAlign:"left"}}>
                                 <Form.Label>Nombre de usuario</Form.Label>
-                                <Form.Control type="email" placeholder={userInfo.usuario} />
+                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.usuario} />
                                 <Form.Label>Nombre completo</Form.Label>
-                                <Form.Control type="email" placeholder={userInfo.nombre_completo} />
+                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.nombre_completo} />
                                 <Form.Label>Descripcion de perfil</Form.Label>
-                                <Form.Control type="email" placeholder={userInfo.descripcion_corta} />
+                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.descripcion_corta} />
                                 <Form.Label>URL pagina personal</Form.Label>
-                                <Form.Control type="email" placeholder={userInfo.url}/>
+                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.url}/>
                                 
                     </Form.Group>
 
