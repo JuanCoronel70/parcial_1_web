@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl'; 
 
 function Perfil(){
 
@@ -26,26 +26,23 @@ function Perfil(){
 
                 <Form style={{marginTop:"50px"}}>
                     <Form.Group className="mb-6" controlId="formBasicInput" style={{textAlign:"left"}}>
-                                <Form.Label>Nombre de usuario</Form.Label>
-                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.usuario} />
-                                <Form.Label>Nombre completo</Form.Label>
-                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.nombre_completo} />
-                                <Form.Label>Descripcion de perfil</Form.Label>
-                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.descripcion_corta} />
-                                <Form.Label>URL pagina personal</Form.Label>
-                                <Form.Control contentEditable={false} type="email" placeholder={userInfo.url}/>
-                                
+                        <Form.Label><FormattedMessage id="username" /></Form.Label>
+                        <Form.Control contentEditable={false} type="email" placeholder={userInfo.usuario} />
+                        <Form.Label><FormattedMessage id="fullname" /></Form.Label>
+                        <Form.Control contentEditable={false} type="email" placeholder={userInfo.nombre_completo} />
+                        <Form.Label><FormattedMessage id="profileDescription" /></Form.Label>
+                        <Form.Control contentEditable={false} type="email" placeholder={userInfo.descripcion_corta} />
+                        <Form.Label><FormattedMessage id="personalURL" /></Form.Label>
+                        <Form.Control contentEditable={false} type="email" placeholder={userInfo.url}/>
                     </Form.Group>
 
                     <Button onClick={handleClick} style={{marginTop:"60px", width:"100%"}}>
-                        Guardar Cambios
+                        <FormattedMessage id="saveChanges" />
                     </Button>
                 </Form>
             </div>
         </div>
     );
-
-
 }
 
 export default Perfil;
