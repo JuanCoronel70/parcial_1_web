@@ -5,12 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {IntlProvider} from 'react-intl';
-import localeEsMessages from "./locales/es"
+import localeEnMessages from "./locales/en";
+import localeEsMessages from "./locales/es";
+
+const locale = navigator.language.split(/[-_]/)[0];
+let messages = locale  === 'es' ? localeEsMessages:locale
+messages = locale === 'en' ? localeEnMessages: localeEsMessages
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <IntlProvider locale="es-ES" messages= {localeEsMessages}>
+  <IntlProvider locale={locale} messages= {messages}>
     <App />
   </IntlProvider>
 );
